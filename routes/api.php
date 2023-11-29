@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\BakatMinatController;
 use App\Http\Controllers\OlahragaController;
-
+use App\Http\Controllers\OrganisasiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,3 +35,10 @@ Route::post("v1/olahraga/store", [OlahragaController::class, "store"]);
 Route::get("v1/olahraga/show/{id}", [OlahragaController::class, "show"]);
 Route::post("v1/olahraga/update/{id}", [OlahragaController::class, "update"]);
 Route::delete("v1/olahraga/destroy/{id}", [OlahragaController::class, "destroy"]);
+
+// Organisasi
+Route::get("v1/organisasi/index", [OrganisasiController::class, "index"]);
+Route::post("v1/organisasi/store", [OrganisasiController::class, "store"]);
+Route::get("v1/organisasi/show/{id}", [OrganisasiController::class, "show"]);
+Route::post("v1/organisasi/update/{id}", [OrganisasiController::class, "update"]);
+Route::delete("v1/organisasi/destroy/{id}", [OrganisasiController::class, "destroy"]);
