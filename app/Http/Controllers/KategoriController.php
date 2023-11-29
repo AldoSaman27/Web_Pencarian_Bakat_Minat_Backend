@@ -8,6 +8,11 @@ use Validator;
 
 class KategoriController extends Controller
 {
+    public
+     function __construct() {
+        $this->middleware("auth:sanctum", ["except"]);
+    }
+
     /**
      * Display a listing of the resource.
      */
