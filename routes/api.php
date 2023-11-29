@@ -6,6 +6,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\BakatMinatController;
 use App\Http\Controllers\OlahragaController;
 use App\Http\Controllers\OrganisasiController;
+use App\Http\Controllers\PrestasiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,3 +43,10 @@ Route::post("v1/organisasi/store", [OrganisasiController::class, "store"]);
 Route::get("v1/organisasi/show/{id}", [OrganisasiController::class, "show"]);
 Route::post("v1/organisasi/update/{id}", [OrganisasiController::class, "update"]);
 Route::delete("v1/organisasi/destroy/{id}", [OrganisasiController::class, "destroy"]);
+
+// Prestasi
+Route::get("v1/prestasi/index", [PrestasiController::class, "index"]);
+Route::post("v1/prestasi/store", [PrestasiController::class, "store"]);
+Route::get("v1/prestasi/show/{id}", [PrestasiController::class, "show"]);
+Route::post("v1/prestasi/update/{id}", [PrestasiController::class, "update"]);
+Route::delete("v1/prestasi/destroy/{id}", [PrestasiController::class, "destroy"]);
