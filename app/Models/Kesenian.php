@@ -7,5 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Kesenian extends Model
 {
+    public $timestamps = false;
     use HasFactory;
+    protected $fillable = [
+        'kesenian',
+    ];
 }
